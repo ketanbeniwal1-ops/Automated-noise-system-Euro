@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Classroom Noise Analytics</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="mouse-bg"></div>
+
+<h1>🏫 Smart Classroom Noise Analytics</h1>
+<p class="subtitle">Class-wise • Period-wise • Privacy-first</p>
+
+<div class="controls">
+  <select id="classSelect"></select>
+  <select id="sectionSelect">
+    <option>A</option><option>B</option>
+    <option>C</option><option>D</option>
+  </select>
+  <button id="startBtn">▶ Start</button>
+  <button id="stopBtn">⏹ Stop</button>
+  <button id="modeBtn">🌙 Mode</button>
+</div>
+
+<div class="card">
+  <h2>🔊 Live Noise</h2>
+  <p id="noiseValue">0</p>
+  <p id="status">Waiting…</p>
+  <p><b>Current Period:</b> <span id="currentPeriod">—</span></p>
+</div>
+
+<div class="card">
+  <h2>📊 15-Second Noise Log</h2>
+  <table>
+    <thead>
+      <tr><th>Time</th><th>Avg dB</th></tr>
+    </thead>
+    <tbody id="dataTable"></tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2>📚 Lecture Average</h2>
+  <p><b>Lecture Avg:</b> <span id="lectureAvg">0</span> dB</p>
+  <p><b>Highest Peak:</b> <span id="peak">0</span> dB</p>
+</div>
+
+<div class="card admin">
+  <h2>🔐 Admin Section</h2>
+  <button id="adminLogin">Admin Login</button>
+
+  <div id="adminPanel" style="display:none;">
+    <h3>Change Admin Password</h3>
+    <input id="newPass" placeholder="New password">
+    <button id="changePass">Change</button>
+
+    <h3>Class Timetable (One period per line)</h3>
+    <textarea id="timetableInput"
+      placeholder="08:00-08:40 Math
+08:40-09:20 English"></textarea>
+    <button id="saveTT">Save Timetable</button>
+
+    <button id="download">⬇ Download Report</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

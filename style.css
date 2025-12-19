@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  text-align: center;
+  transition: 0.4s;
+}
+
+.dark { background:#121212; color:white; }
+
+.card {
+  background:white;
+  margin:15px auto;
+  padding:20px;
+  width:380px;
+  border-radius:12px;
+  box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+.dark .card { background:#1e1e1e; }
+
+.controls button, select {
+  padding:10px;
+  margin:5px;
+}
+
+#noiseValue { font-size:42px; color:green; }
+
+table {
+  width:100%;
+  border-collapse:collapse;
+}
+th,td {
+  border:1px solid #ccc;
+  padding:6px;
+}
+
+#mouse-bg {
+  position:fixed;
+  width:350px;
+  height:350px;
+  background:radial-gradient(circle,rgba(0,140,255,.25),transparent 70%);
+  pointer-events:none;
+  transform:translate(-50%,-50%);
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Smart Classroom Noise Analytics",
+  "short_name": "ClassNoise",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#1976d2",
+  "theme_color": "#1976d2"
+}
